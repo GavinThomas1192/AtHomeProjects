@@ -39,3 +39,60 @@ $(document).ready(function() {
     $(this).remove();
   });
 });
+//fade out on something when clicked
+$(document).ready(function() {
+  $('div').click(function() {
+    $(this).fadeOut('fast');
+  });
+});
+//Adds Two functions
+$(document).ready(function() {
+  $('div').click(function() {
+    $(this).fadeOut('fast');
+  });
+  $('div').hover(function() {
+    $(this).addClass('red');
+  });
+});
+//animate!!!!!!
+$(document).ready(function() {
+  $(document).keydown(function() {
+    $('div').animate({
+      left: '+=10px'
+    });
+  });
+});
+//move an image around!!!!!!! case =  specific key
+$(document).ready(function() {
+  $(document).keydown(function(key) {
+    switch (parseInt(key.which, 10)) {
+      // Left arrow key pressed
+      case 37:
+        $('img').animate({
+          left: "-=10px"
+        }, 'fast');
+        break;
+        // Up Arrow Pressed
+      case 38:
+        $('img').animate({
+          top: "-=10px"
+        }, 'fast');
+        // Put our code here
+        break;
+        // Right Arrow Pressed
+      case 39:
+        $('img').animate({
+          left: "+=10px"
+        }, 'fast');
+        // Put our code here
+        break;
+        // Down Arrow Pressed
+      case 40:
+        $('img').animate({
+          top: "+=10px"
+        }, 'fast');
+        // Put our code here
+        break;
+    }
+  });
+});
