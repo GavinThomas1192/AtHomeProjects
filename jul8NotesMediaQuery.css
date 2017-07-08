@@ -28,6 +28,8 @@ body {
     background-image: url("bg.png") 50% 50% no-repeat;
   }
 }
+/*example for media in between two resolutions*/
+@media min-width: 575px) and (max-width: 991px) {};
 /* Viewport */
 /*use the minimum-scale, maximum-scale, initial-scale, and user-scalable properties */
 <meta name="viewport" content="width=device-width, initial-scale=1">
