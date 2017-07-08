@@ -28,3 +28,14 @@ $(document).ready(function() {
     $('.list').append('<div class="item">' + toAdd + '</div>');
   });
 });
+
+//to delete newly created divs by clicking
+$(document).ready(function() {
+  $('#button').click(function() {
+    var toAdd = $('input[name=checkListItem]').val();
+    $('.list').append('<div class="item">' + toAdd + '</div>');
+  });
+  $(document).on('click', '.item', function() {
+    $(this).remove();
+  });
+});
