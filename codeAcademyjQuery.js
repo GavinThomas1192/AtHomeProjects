@@ -62,6 +62,27 @@ $(document).ready(function() {
     });
   });
 });
+///moare animations
+$(document).ready(function() {
+  $('div').click(function() {
+    $(this).effect('explode');
+  });
+});
+//accordion!!!!
+$(document).ready(function() {
+  $("#menu").accordion({
+    collapsible: true,
+    active: false
+  });
+});
+//dragable!!!
+$(document).ready(function() {
+  $('#car').draggable();
+});
+//sortable!!!!
+$(document).ready(function() {
+  $('ol').sortable();
+});
 //move an image around!!!!!!! case =  specific key
 $(document).ready(function() {
   $(document).keydown(function(key) {
