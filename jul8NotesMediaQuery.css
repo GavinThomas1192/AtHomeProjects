@@ -1,0 +1,51 @@
+/* Default styles first then media queries
+Mobile first */
+@media screen and (min-width: 400px)  {...}
+@media screen and (min-width: 600px)  {...}
+@media screen and (min-width: 1000px) {...}
+@media screen and (min-width: 1400px) {...}
+/*math to figure % based on pixels and a max width of 538*/
+section,
+aside {
+  margin: 1.858736059%; /*  10px ÷ 538px = .018587361 */
+}
+section {
+  float: left;
+  width: 63.197026%;    /* 340px ÷ 538px = .63197026 */
+}
+aside {
+  float: right;
+  width: 29.3680297%;  /* 158px ÷ 538px = .293680297 */
+}
+
+/* Default media */
+body {
+  background: #ddd;
+}
+/* Media for larger devices */
+@media screen and (min-width: 800px) {
+  body {
+    background-image: url("bg.png") 50% 50% no-repeat;
+  }
+}
+/* Viewport */
+/*use the minimum-scale, maximum-scale, initial-scale, and user-scalable properties */
+<meta name="viewport" content="width=device-width">
+/*HTML*/
+<figure>
+  <iframe src="https://www.youtube.com/embed/4Fqg43ozz7A"></iframe>
+</figure>
+/*CSS for HTML */
+figure {
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 */
+  position: relative;
+  width: 100%;
+}
+iframe {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
