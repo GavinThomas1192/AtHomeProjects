@@ -15,10 +15,22 @@ timerDiv.innerHTML = secondsToTime(currentTime);
 let timer = setInterval(() => {
     // Remove one second
     currentTime = currentTime + 1;
+    testTime = currentTime;
+
     // Print out the time
     timerDiv.innerHTML = secondsToTime(currentTime);
+
+    testDiv.innerHTML = secondsToTime(testTime);
     // When reaching 0. Stop.
-    if(currentTime <= 0) {
+    if(currentTime >= 30) {
         clearInterval(timer);
     }
+    // while(testTime < 20){
+    //   if (testTime === 6){
+    //     let audio = new Audio('./../wab/buzzer_x.wav')
+    //     audio.play();
+    //     testDiv.innerHTML =  'BEEEEEEP'
+    //     testTime = null;
+    //   }
+    // }
 }, 1000); // 1 second
